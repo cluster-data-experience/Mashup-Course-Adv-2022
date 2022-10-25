@@ -1,0 +1,7 @@
+.native-object {
+  width: 100%;
+}
+
+.native-object > div {
+  background-color: transparent;
+}

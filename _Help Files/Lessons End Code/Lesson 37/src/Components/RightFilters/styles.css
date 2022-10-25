@@ -1,0 +1,86 @@
+.navigation-right {
+	display: flex;
+	flex-direction: column;
+	right: -280px;
+	z-index: 10;
+	width: 250px;
+	left: initial;
+	transition: right 300ms ease;
+	position: fixed;
+	margin-top: 64px;
+	bottom: 0;
+	top: 0;
+	background-color: white;
+    padding: 10px;
+	box-shadow: 1px 1px 9px -4px black;
+}
+
+.navigation-right:before {
+	right: -250px;
+	left: initial;
+}
+
+.navigation-right.opened {
+	right: 0;
+}
+
+.navigation-right.opened :before {
+	right: 0;
+}
+
+.navigation-right .close-filters {
+	background-color: #eeeeee;
+	color: #525252;
+	position: absolute;
+	top: 0px;
+	height: 33px;
+	width: 22px;
+	border: 0;
+	right: 250px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	z-index: 200000;
+}
+
+.close-filters .material-icons {
+	font-size: 17px;
+	position: relative;
+	top: 2px;
+}
+
+.navigation-right .close-filters:hover {
+	background-color: #b9b9b9;
+}
+
+.filter-actions-mobile {
+	display: none;
+}
+
+.qlik-all-filters {
+	margin-top: 20px;
+	width: 200px;
+	position: relative;
+}
+
+.app-filters-container {
+	flex: 1;
+	height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 1116px) {
+	.navigation-right {
+		margin-top: 60px;
+		box-shadow: 1px 1px 10px -3px black;
+	}
+
+	.filter-actions-mobile {
+		display: flex;
+	}
+}
+
+@media (max-width: 768px) {
+	.navigation-right {
+		top: 47px;
+	}
+}

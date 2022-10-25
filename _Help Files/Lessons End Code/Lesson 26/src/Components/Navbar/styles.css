@@ -1,0 +1,238 @@
+.navbar {
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	position: fixed;
+	width: 100%;
+	box-shadow: 1px 1px 9px -4px black;
+	z-index: 10;
+	background-color: #f5f5f5;
+}
+
+.navbar-default {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.navbar .brand-wrapper {
+	display: flex;
+	height: 60px;
+	width: 200px;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #005D53;
+}
+
+.navbar .brand-wrapper .branding {
+	background-size: contain;
+	font-weight: lighter;
+	font-weight: 700;
+	padding-left: 22px;
+	font-size: 18px;
+	color: white;
+}
+
+.navbar .brand-wrapper .update-time-container {
+	padding-left: 22px;
+}
+
+.navbar .brand-wrapper .update-time-container p {
+	margin: 0;
+	font-weight: 700;
+    color: #fff;
+    font-size: 12px;
+}
+
+.navbar .qlik-topfilters {
+	flex: 1;
+	overflow: auto;
+	padding: 5px;
+	z-index: 11;
+    display: flex;
+}
+
+.navbar .qlik-topfilters .topfilters-label {
+	display: inline-block;
+	color: #75768d;
+}
+
+/* scrollbar height  */
+.navbar .qlik-topfilters::-webkit-scrollbar {
+	height: 5px;
+}
+
+.navbar-nav>li>a {
+	padding: 20px 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.navbar-nav>li:first-child>a {
+	padding-left: 0;
+}
+
+.navbar-nav>li:last-child>a {
+	padding: 10px 25px 10px 15px;
+}
+
+.navbar-nav.navbar-right a .label {
+	margin: -5px 0 5px;
+}
+
+.burger-menu {
+	background-color: transparent;
+	border: none;
+	margin: 5px 4px 0 13px;
+	font-size: 26px;
+	color: #A5A5A5;
+}
+
+.nav-right-mobile {
+	position: absolute;
+	display: none;
+	z-index: 10;
+	top: 17px;
+	right: 13px;
+}
+
+.nav-right-mobile button {
+	margin-left: 11px;
+}
+
+.right-buttons {
+	display: flex;
+	margin-right: 50px;
+	position: relative;
+}
+
+.right-buttons .more-filters {
+	color: #003D37;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.right-buttons button {
+	margin-right: 10px;
+}
+
+.nav-right-mobile .btn-icon i,
+.right-buttons .btn-icon i {
+	color: #048477;
+}
+
+.icon-filter {
+	height: 25px;
+	width: 25px;
+	font-size: 22px;
+	border: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.logout-btn {
+	font-size: 20px;
+	position: relative;
+	margin: 0 10px;
+	background-color: transparent;
+	border: none;
+	margin-left: 0; 
+}
+
+/* nav-toggle is for open menu css  */
+.nav-toggle .layout {
+	margin-left: 0;
+}
+
+.nav-toggle .navigation {
+	left: -200px;
+}
+
+.nav-toggle .navigation:before {
+	left: -200px;
+}
+
+.nav-toggle .navigation-right {
+	left: initial;
+}
+
+.nav-right-toggle .layout {
+	margin-right: 250px;
+}
+
+/* end nav toggle  */
+
+@media(max-width: 1116px) {
+	.nav-right-mobile {
+		display: flex;
+		position: static;
+		margin-right: 50px;
+	}
+
+	.right-buttons {
+		display: none;
+	}
+}
+
+@media(max-width: 768px) {
+    .navbar {
+		flex-direction: column;
+		background-color: #06433b;
+	}
+
+	.navbar-header {
+		display: flex;
+		justify-content: space-between;
+		float: none;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.navbar-brand {
+		background: #06433b;
+	}
+
+	.navbar .brand-wrapper {
+		background: transparent;
+		text-align: center;
+	}
+
+	.navbar .qlik-topfilters {
+		background-color: white;
+		margin-top: -1px;
+		border-bottom: 1px solid #313348;
+		height: 50px;
+		width: 100%;
+		padding-left: 20px;
+		white-space: nowrap;
+		z-index: 9;
+	}
+
+	.burger-menu {
+		position: absolute;
+		left: 20px;
+		top: 17px;
+		margin-left: 0;
+		margin-top: 0;
+		color: white;
+	}
+
+	.nav-right-mobile {
+		position: absolute;
+		margin-right: 0;
+	}
+
+	.nav-right-mobile .btn-icon i,
+	.right-buttons .btn-icon i {
+		color: #ffffff;
+	}
+
+	.navbar .brand-wrapper .branding,
+	.navbar .brand-wrapper .update-time-container {
+		padding-left: 0;
+	}
+
+}
